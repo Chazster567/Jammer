@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jammer - Matching Artists & Venues</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="icon" href="assets/j.png">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/f4b3621bf1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="d 40%x flex-column">
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <img id="Jammer" src="assets/jammerlogo.png" style="height: 30px" href="">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse fa-align-right" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto" >
+        <li class="nav-item">
+          <a class="nav-link"  href="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item logged-out" style="display: none;">
+          <a class="nav-link" href="account.html">Login</a>
+        </li>
+        <li class="nav-item logged-out" style="display: none;">
+          <a class="nav-link" href="register.html">Sign Up</a>
+        </li>
+        <li class="nav-item logged-in" style="display: none;">
+          <a class="nav-link" href="#" id="logout">Logout</a>
+        </li>    
+      </ul>
+    </div>  
+  </nav>
+
+
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="z-index: -1; opacity: 80%;">
+    <source src="assets/video.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <img src="assets/jammerlogo.png" class="display-3 col-md-3 col-8">
+        <p class="lead mb-0" style="margin-top: 10px;">Let the gigs come to you.</p>
+        <button type="button" class="btn text-uppercase active ">Get Tickets</button>
+        <button type="button" class="btn .btn-default text-uppercase active">Find Venues & Bands</button>
+        <p class="lead mb-0"></p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <p class="text-center">
+          Jammer, for Bands, for venues.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="sticky-footer-bottom" class="py-4 bg-dark text-white-50">
+  <div class="container text-center">
+    <small>Copyright &copy; Jammer</small>
+  </div>
+</footer>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAt7fUTw09oFEcZThE-Azw-X3icZ0a6HMg",
+    authDomain: "jammer-b7d3d.firebaseapp.com",
+    databaseURL: "https://jammer-b7d3d.firebaseio.com",
+    projectId: "jammer-b7d3d",
+    storageBucket: "jammer-b7d3d.appspot.com",
+    messagingSenderId: "221096352580",
+    appId: "1:221096352580:web:22b84defbda7ba25571511",
+    measurementId: "G-DS8PXHNB37"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+
+  db.settings({ timestampsInSnapshots: true })
+</script>
+
+<script src="js/logout.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

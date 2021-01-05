@@ -1,0 +1,11 @@
+{
+  "name": "jammer",
+  "version": "1.0.0",
+  "description": "artist and venue matching service",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Whitehair",
+  "license": "ISC"
+}
