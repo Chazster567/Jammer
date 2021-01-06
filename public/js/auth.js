@@ -7,18 +7,15 @@ signupForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     //pulls in values for various form fields
-    const username = signupForm['inputUsername'].value;
     const email = signupForm['inputEmail'].value;
     const password = signupForm['inputPassword'].value;
 
     //firebase function adds user to database
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        //adds a display name for the user
-        var user = auth.currentUser;
-        user.updateProfile({
-            displayName: username
+        return db.collection('users').doc(cred.user.uid).set({
+            displayName: signupForm['inputUsername'].value
         });
-
+    }).then(() => {
         //sends the user to the sign in page and resets the form
         console.log(cred);
         window.location = 'account.html';

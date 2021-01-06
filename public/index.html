@@ -45,7 +45,6 @@
     </div>  
   </nav>
 
-
 <header>
   <div class="overlay"></div>
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="z-index: -1; opacity: 80%;">
@@ -70,15 +69,44 @@
 
 <section class="my-5">
   <div class="container">
-    <div class="row">
-      <div class="col-md-8 mx-auto">
-        <p class="text-center">
-          Jammer, for Bands, for venues.
-        </p>
-      </div>
+    <div class="col-12">
+      <h2 class="text-center">
+        Events
+      </h2>
+      <button type="button" class="btn logged-in btn-default active" data-toggle="modal" data-target="#event-modal">
+        Add Event
+      </button>
+    </div>
+    <div class="my-5 row events">
     </div>
   </div>
 </section>
+
+<div id="event-modal" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Event</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      <div class="modal-body">
+        <form id="create-form">
+          <div class="form-group">
+            <label for="title" class="col-form-label">Event Title:</label>
+            <input type="text" class="form-control" id="title">
+          </div>
+          <div class="form-group">
+            <label for="content" class="col-form-label">Event Details:</label>
+            <textarea class="form-control" id="content"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default active">Add Event</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
 <footer id="sticky-footer-bottom" class="py-4 bg-dark text-white-50">
   <div class="container text-center">
