@@ -30,7 +30,7 @@
           <a class="nav-link" href="">About</a>
         </li>
         <li class="nav-item logged-in">
-          <a class="nav-link" href="user.html">Account</a>
+            <a class="nav-link" href="user.html">Account</a>
         </li>
         <li class="nav-item logged-out" style="display: none;">
           <a class="nav-link" href="account.html">Login</a>
@@ -45,68 +45,17 @@
     </div>  
   </nav>
 
-<header>
-  <div class="overlay"></div>
-  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="z-index: -1; opacity: 80%;">
-    <source src="assets/video.mp4" type="video/mp4">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <img src="assets/jammerlogo.png" class="display-3 col-md-3 col-8">
-        <p class="lead mb-0" style="margin-top: 10px;">Let the gigs come to you.</p>
-        <button type="button" class="btn text-uppercase active ">Get Tickets</button>
-        <button type="button" class="btn .btn-default text-uppercase active">Find Venues & Bands</button>
-        <p class="lead mb-0"></p>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-youtube"></a>
-        <a href="#" class="fa fa-instagram"></a>
-      </div>
-    </div>
-  </div>
-</header>
-
 <section class="my-5">
   <div class="container">
     <div class="col">
       <h2 class="text-center">
-        Events
+        Account
       </h2>
-      <button type="button" class="btn logged-in btn-default active" data-toggle="modal" data-target="#event-modal">
-        Add Event
-      </button>
     </div>
-    <div class="my-5 row events">
+    <div class="my-5 row user-details">
     </div>
   </div>
 </section>
-
-<div id="event-modal" class="modal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Create Event</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-          </button>
-      </div>
-      <div class="modal-body">
-        <form id="create-form">
-          <div class="form-group">
-            <label for="title" class="col-form-label">Event Title:</label>
-            <input type="text" class="form-control" id="title">
-          </div>
-          <div class="form-group">
-            <label for="content" class="col-form-label">Event Details:</label>
-            <textarea class="form-control" id="content"></textarea>
-          </div>
-          <button type="submit" class="btn btn-default active">Add Event</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
 <footer id="sticky-footer-bottom" class="py-4 bg-dark text-white-50">
   <div class="container text-center">
@@ -147,6 +96,6 @@
 </script>
 
 <script src="js/logout.js"></script>
-<script src="js/index.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>

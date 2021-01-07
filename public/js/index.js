@@ -4,13 +4,13 @@ const setupEvents = (data) => {
     data.forEach(doc => {
         const event = doc.data();
         const li = `
-            <div class="col-4 text-center">
+            <div class="col-lg-4 col-md-6 col-xs-12 text-center">
                 <h3>${event.title}</h3>
                 <p>${event.content}</p>
             </div>
         `;
         html += li;
-    })
+    });
     eventList.innerHTML = html;
 }
 
@@ -56,5 +56,5 @@ createForm.addEventListener('submit', (e) => {
         createForm.reset();
     }).catch(err => {
         console.log(err.message);
-    })
-})
+    });
+});

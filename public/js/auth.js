@@ -13,11 +13,11 @@ signupForm.addEventListener('submit', (e) => {
     //firebase function adds user to database
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         return db.collection('users').doc(cred.user.uid).set({
-            displayName: signupForm['inputUsername'].value
+            displayName: signupForm['inputUsername'].value,
+            userType: signupForm['userType'].value
         });
     }).then(() => {
         //sends the user to the sign in page and resets the form
-        console.log(cred);
         window.location = 'account.html';
         signupForm.reset();
     });
