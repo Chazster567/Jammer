@@ -2,6 +2,10 @@
     color: rgb(153, 0, 17);
 }
 
+.navbar {
+    background-color: white;
+}
+
 header {
     position: relative;
     height: 70vh;

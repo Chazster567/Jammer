@@ -29,6 +29,9 @@
         <li class="nav-item">
           <a class="nav-link" href="">About</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="tickets.html">Tickets</a>
+        </li>
         <li class="nav-item logged-in">
           <a class="nav-link" href="user.html">Account</a>
         </li>
@@ -40,7 +43,7 @@
         </li>
         <li class="nav-item logged-in" style="display: none;">
           <a class="nav-link" href="#" id="logout">Logout</a>
-        </li>    
+        </li>
       </ul>
     </div>  
   </nav>
@@ -67,13 +70,13 @@
   </div>
 </header>
 
-<section class="my-5">
+<section class="my-5 logged-in">
   <div class="container">
     <div class="col">
       <h2 class="text-center">
         Events
       </h2>
-      <button type="button" class="btn logged-in btn-default active" data-toggle="modal" data-target="#event-modal">
+      <button type="button" class="btn btn-default active" data-toggle="modal" data-target="#event-modal">
         Add Event
       </button>
     </div>
@@ -111,6 +114,9 @@
 <footer id="sticky-footer-bottom" class="py-4 bg-dark text-white-50">
   <div class="container text-center">
     <small>Copyright &copy; Jammer</small>
+  </div>
+  <div class="container text-center">
+    <a href="gdpr.html" class="text-white-50">GDPR</a>
   </div>
 </footer>
 

@@ -73,6 +73,11 @@ a {
   margin-bottom: 1rem;
 }
 
+.form-group select {
+  height: auto;
+  border-radius: 1rem;
+}
+
 .form-label-group input {
   height: auto;
   border-radius: 1rem;
