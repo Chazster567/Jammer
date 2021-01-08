@@ -22,6 +22,7 @@ body {
     background-color: #adabab;
     border-color:#000000;
   }
+
   a.super-text {
     color: rgb(255, 255, 255);
     font-size: xx-large;
@@ -31,13 +32,14 @@ body {
 
   .mx-auto {
     margin-left: auto!important;
-    margin-top: 27%;
   }
+
   .btn-light {
     color: #fff;
     background-color: #990011;
     border-color: #180202;
   }
+
   .btn-google{
     font-family: 'Roboto', sans-serif;
     
