@@ -18,6 +18,13 @@ a {
   background-color: transparent;
 }
 
+a.already {
+  color:#990011;
+  font-size: 100%;
+  text-decoration: none;
+  background-color: transparent;
+}
+
 .ml-auto, .mx-auto {
   margin-left: auto!important;
 }
@@ -25,6 +32,7 @@ a {
 .btn-light {
   color: #fff;
   background-color: #990011;
+  border-color: #990011;
 }
 
 .btn-google{
@@ -56,6 +64,11 @@ a {
   width: 100%;
 }
 
+.logo-splash {
+  width: 100%;
+  padding: 10%;
+}
+
 .form-control:focus{border-color: #a83434;  box-shadow: none; -webkit-box-shadow: none;} 
 .has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
 
@@ -69,16 +82,12 @@ a {
 }
 
 .form-label-group {
+  z-index: 999;
   position: relative;
   margin-bottom: 1rem;
 }
 
-.form-group select {
-  height: auto;
-  border-radius: 1rem;
-}
-
-.form-label-group input {
+.form-label-group input, .form-label-group select, .form-label-group textarea {
   height: auto;
   border-radius: 1rem;
 }
@@ -97,7 +106,7 @@ a {
   margin-bottom: 0;
   /* Override default `<label>` margin */
   line-height: 1.5;
-  color: #050505;
+  color: #636363;
   border: 1px solid transparent;
   border-radius: .25rem;
   transition: all .1s ease-in-out;
@@ -186,4 +195,34 @@ a {
   .form-label-group input:-ms-input-placeholder {
     color: #777;
   }
+}
+
+.fa {
+  padding: 0px;
+  width: 10%;
+  text-decoration: none;
+  margin-top: 30px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.fa:hover {
+  color: rgb(25, 0, 17);
+  text-decoration: none;
+}
+
+.fa-facebook {
+  color: rgb(153, 0, 17);
+}
+
+.fa-twitter {
+  color: rgb(153, 0, 17);
+}
+
+.fa-youtube {
+  color: rgb(153, 0, 17);
+}
+
+.fa-instagram {
+  color: rgb(153, 0, 17);
 }
