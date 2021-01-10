@@ -113,23 +113,23 @@ a.already {
 }
 
 .form-label-group input::-webkit-input-placeholder {
-  color: transparent;
+  color: #fff;
 }
 
 .form-label-group input:-ms-input-placeholder {
-  color: transparent;
+  color: #fff;
 }
 
 .form-label-group input::-ms-input-placeholder {
-  color: transparent;
+  color: #fff;
 }
 
 .form-label-group input::-moz-placeholder {
-  color: transparent;
+  color: #fff;
 }
 
 .form-label-group input::placeholder {
-  color: transparent;
+  color: #fff;
 }
 
 .form-label-group input:not(:placeholder-shown) {
