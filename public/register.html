@@ -49,6 +49,10 @@
                     <option>Venue</option>
                   </select>
                 </div>
+                <div class="form-label-group">
+                  <input type="file" id="imageProfile" class="form-control" placeholder="Profile Image" onchange="chooseFile(event)">
+                  <label for="imageProfile">Profile Image</label>
+                </div>
                 <button class="btn btn-lg btn-light btn-block text-uppercase" type="submit"><i class="fas fa-user-circle mr-2"></i>Register</button>
                 <hr class="my-4">
                 <p class="align-text-center">Already have a account? <a class="already" href="account.html">Sign In</a></p>
@@ -64,6 +68,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
