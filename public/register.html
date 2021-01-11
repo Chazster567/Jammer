@@ -44,13 +44,13 @@
                   <label for="inputConfirmPassword">Confirm Password</label>
                 </div>
                 <div class="form-label-group">
-                  <select class="form-control" id="userType">
+                  <select class="form-control" id="userType" required>
                     <option>Artist</option>
                     <option>Venue</option>
                   </select>
                 </div>
                 <div class="form-label-group">
-                  <input type="file" id="imageProfile" class="form-control" placeholder="Profile Image" onchange="chooseFile(event)">
+                  <input type="file" id="imageProfile" class="form-control" placeholder="Profile Image" onchange="chooseFile(event)" required>
                   <label for="imageProfile">Profile Image</label>
                 </div>
                 <button class="btn btn-lg btn-light btn-block text-uppercase" type="submit"><i class="fas fa-user-circle mr-2"></i>Register</button>
