@@ -17,19 +17,17 @@ signupForm.addEventListener('submit', (e) => {
 
     //firebase function adds user to database
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        firebase.storage().ref('users/' + cred.user.uid + '/profile.png').put(file).then(function() {
-            console.log('successfully uploaded');
-        }).catch(error => {
-            console.log(error.message);
+        storage.ref('users/' + cred.user.uid + '/profile.png').put(file).then(function() {
+            return db.collection('users').doc(cred.user.uid).set({
+                displayName: signupForm['inputUsername'].value,
+                userType: signupForm['userType'].value
+            });
+        }).then(() => {
+            //sends the user to the sign in page and resets the form
+            console.log(cred);
+            window.location = 'account.html';
+            signupForm.reset();
         });
-
-        return db.collection('users').doc(cred.user.uid).set({
-            displayName: signupForm['inputUsername'].value,
-            userType: signupForm['userType'].value
-        });
-    }).then(() => {
-        //sends the user to the sign in page and resets the form
-        window.location = 'account.html';
-        signupForm.reset();
     });
 });
+
